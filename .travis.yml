@@ -18,5 +18,9 @@ script:
   - tox
   - cd docs
   - make html
-  - cd _build/html
-  - ls -lh
+
+# Deploy docs to gh-pages
+after_success:
+  - cd docs
+  - make html
+  - ./deploy.sh
