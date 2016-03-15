@@ -11,7 +11,12 @@ env:
   - TOXENV=pypy
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox
+install: pip install -r requirements_dev.txt
 
 # command to run tests, e.g. python setup.py test
-script: tox
+script:
+  - tox
+  - cd docs
+  - make html
+  - cd _build/html
+  - ls -lh
