@@ -1,12 +1,7 @@
-=======
-Modules
-=======
+barrowman
+=========
 
-Modules in the barroman python library:
+.. toctree::
+   :maxdepth: 4
 
-
-Original
-========
-
-.. automodule:: barrowman.original
-    :members:
+   barrowman
