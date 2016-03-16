@@ -46,7 +46,7 @@
 
 {%- macro sidebar() %}
       {%- if render_sidebar %}
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar column is-3" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
           {%- block sidebarlogo %}
           {%- if logo %}
@@ -202,37 +202,37 @@
   </section>
 {% endblock %}
 
-{%- block relbar1 %}{{ relbar() }}{% endblock %}
-
+<section class="section">
 {%- block content %}
 
  <div class="container">
-  {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+  <div class="columns">
 
-    <div class="content">
-  {%- block document %}
-      <div class="documentwrapper">
-      {%- if render_sidebar %}
-        <div class="bodywrapper">
-      {%- endif %}
-          <div class="body" role="main">
-            {% block body %} {% endblock %}
-          </div>
-      {%- if render_sidebar %}
-        </div>
-      {%- endif %}
-      </div>
-  {%- endblock %}
+   {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
+   {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
 
-  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
-      <div class="clearer"></div>
-    </div>
+    <div class="column">
+
+    {%- block document %}
+     <div class="body content" role="main">
+      {% block body %} {% endblock %}
+     </div>
+    {%- endblock %}
+   </div>
+
+  </div>
+ </div>
+
 {%- endblock %}
 
+{%- block relbar0 %}{{ relbar() }}{% endblock %}
 {%- block relbar2 %}{{ relbar() }}{% endblock %}
 
+  </section>
+
 {%- block footer %}
-    <div class="footer" role="contentinfo">
+    <footer class="footer" role="contentinfo">
+    <div class="container">
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
@@ -247,6 +247,7 @@
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
     </div>
+    </footer>
 {%- endblock %}
   </body>
 </html>
