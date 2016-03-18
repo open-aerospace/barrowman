@@ -1,22 +1,19 @@
-===============================
-barrowman
-===============================
+====================================
+The :code:`barrowman` Python Package
+====================================
 
 .. image:: https://img.shields.io/pypi/v/barrowman.svg
         :target: https://pypi.python.org/pypi/barrowman
 
-.. image:: https://img.shields.io/travis/open-aerospace/barrowman.svg
+.. image:: https://travis-ci.org/open-aerospace/barrowman.svg?branch=master
         :target: https://travis-ci.org/open-aerospace/barrowman
-
-.. image:: https://readthedocs.org/projects/barrowman/badge/?version=latest
-        :target: https://readthedocs.org/projects/barrowman/?badge=latest
-        :alt: Documentation Status
 
 
 The Practical Calculation of the Aerodynamic Characteristics of Slender Finned Vehicles
 
 * Free software: GPLv3 license
-* Documentation: https://barrowman.readthedocs.org.
+* Documentation: https://open-aerospace.github.io/barrowman.
+
 
 Features
 --------
