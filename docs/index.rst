@@ -14,6 +14,7 @@ Contents:
    readme
    installation
    usage
+   barrowman
    contributing
    authors
    history

@@ -1,6 +1,6 @@
-====================================
-The :code:`barrowman` Python Package
-====================================
+============================
+The barrowman Python Package
+============================
 
 .. image:: https://img.shields.io/pypi/v/barrowman.svg
         :target: https://pypi.python.org/pypi/barrowman

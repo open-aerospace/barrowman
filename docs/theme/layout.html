@@ -25,19 +25,11 @@
 
 {%- macro relbar() %}
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>{{ _('Navigation') }}</h3>
       <ul>
-        {%- for rellink in rellinks %}
-        <li class="right" {% if loop.first %}style="margin-right: 10px"{% endif %}>
+        {%- for rellink in rellinks | reverse %}
+        <li class="right {% if loop.last %}is-text-right{% endif %}">
           <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
-             {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
-          {%- if not loop.first %}{{ reldelim2 }}{% endif %}</li>
-        {%- endfor %}
-        {%- block rootrellink %}
-        <li class="nav-item nav-item-0"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
-        {%- endblock %}
-        {%- for parent in parents %}
-          <li class="nav-item nav-item-{{ loop.index }}"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
+             {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a></li>
         {%- endfor %}
         {%- block relbaritems %} {% endblock %}
       </ul>
@@ -59,7 +51,9 @@
           {% block menu %}
             {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
             {% if toctree %}
+              <div class="toc">
                 {{ toctree }}
+              </div>
             {% else %}
                 <!-- Local TOC -->
                 <div class="local-toc">{{ toc }}</div>
@@ -73,18 +67,6 @@
             {%- endfor %}
           {%- else %}
             {#- old style sidebars: using blocks -- should be deprecated #}
-            {%- block sidebartoc %}
-            {%- include "localtoc.html" %}
-            {%- endblock %}
-            {%- block sidebarrel %}
-            {%- include "relations.html" %}
-            {%- endblock %}
-            {%- block sidebarsourcelink %}
-            {%- include "sourcelink.html" %}
-            {%- endblock %}
-            {%- if customsidebar %}
-            {%- include customsidebar %}
-            {%- endif %}
             {%- block sidebarsearch %}
             {%- include "searchbox.html" %}
             {%- endblock %}
@@ -227,6 +209,9 @@
     {%- block document %}
      <div class="body content" role="main">
       {% block body %} {% endblock %}
+
+      {%- block relbar0 %}{{ relbar() }}{% endblock %}
+
      </div>
     {%- endblock %}
    </div>
@@ -235,9 +220,6 @@
  </div>
 
 {%- endblock %}
-
-{%- block relbar0 %}{{ relbar() }}{% endblock %}
-{%- block relbar2 %}{{ relbar() }}{% endblock %}
 
   </section>
 
