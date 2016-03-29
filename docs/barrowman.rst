@@ -1,17 +1,8 @@
 barrowman package
 =================
 
-
 Submodules
 ----------
-
-barrowman.barrowman module
---------------------------
-
-.. automodule:: barrowman.barrowman
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 barrowman.original module
 -------------------------

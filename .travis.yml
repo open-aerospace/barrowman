@@ -24,4 +24,5 @@ after_success:
   - cd docs
   - make html
   - cp _config.yml _build/html/
+  - x=$(for i in `git log --all --pretty=format:{\"hash\":\ \"%h\"\,\ \"time\":\"%ad\"},`; do echo -n "${i} "; done| sed 's/, $//') ; echo "["$x"]" > _build/html/git.json
   - ./deploy.sh
