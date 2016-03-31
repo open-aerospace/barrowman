@@ -76,3 +76,20 @@ class Tube(Component):
 
     def _area(self):
         return pi * self._radius**2
+
+
+class Fin(Component):
+    """A single trapezoidal fin.
+    """
+
+    def __init__(self, root, tip, span, sweep, sweepangle=45):
+        self._root = root
+        self._tip = tip
+        self._span = span
+
+        if sweep is not None:
+            self._sweep = sweep
+            self._sweepangle = 0
+        else:
+            self._sweep = 0
+            self._sweepangle = sweepangle

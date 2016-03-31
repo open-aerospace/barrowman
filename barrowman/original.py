@@ -41,7 +41,13 @@ From the paper:
 
 
 class Body(object):
-    """Aerodynamic model of the body section (excluding fins) of a rocket
+    """Aerodynamic model of the body section (excluding fins) of a rocket. This includes
+    the nose cone.
+
+    Nomenclature diagram:
+
+    .. figure:: images/barrowman_nomenclature.svg
+       :alt: Diagram of Barrowman's rocket parts nomenclature.
 
     :param list body: A list of body components (Nose, tube, transition, etc.)
 
@@ -79,3 +85,32 @@ class Body(object):
         """
 
         return self.l_0 - (self.V_B/self.A_B)
+
+
+class Tail(object):
+    """The tail section of the rocket: i.e. the part with fins. Assume that
+    each fin is exactly the same and evenly spaced, and the bottom of the root
+    chord is also the bottom of the rocket. 
+
+    Nomenclature diagram:
+
+    .. figure:: images/barrowman_nomenclature.svg
+       :alt: Diagram of Barrowman's rocket parts nomenclature.
+
+    Takes a fin definition and the number of fins.
+
+    :param Fin fin: A Fin object
+    :param int N: The number of fins on the tail
+    """
+
+    def __init__(self, fin, N):
+        return
+
+    def C_P(self):
+        """Center of Pressure.
+
+        :returns: the center of pressure of the rocket body in meters (tip of nose = 0)
+
+        """
+
+        return
