@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from math import pi
+from math import pi, atan, tan, radians
 
 __author__ = 'Nathan Bergey'
 __email__ = 'nathan.bergey@gmail.com'
@@ -80,16 +80,33 @@ class Tube(Component):
 
 class Fin(Component):
     """A single trapezoidal fin.
+
+    Note: though both sweep and sweepangle are optional, you probably need to specify at
+    least one to correctly define a fin. Specifying both makes the system overdetermined.
+
+    Nomenclature diagram:
+
+    .. figure:: images/barrowman_fin_nomenclature.svg
+       :alt: Diagram of Barrowman's fin nomenclature.
+
+    :param float root: Length of the root chord of the fin [meters]
+    :param float tip: Length of the tip chord of the fin  [meters]
+    :param float span: Length of the span of the fin [meters]
+    :param float sweep: (Optional, default=None) The length of the sweep portion [meters]
+    :param float sweepangle: (Optional, default=45.0) The angle of the sweep [degrees]
+
     """
 
-    def __init__(self, root, tip, span, sweep, sweepangle=45):
-        self._root = root
-        self._tip = tip
-        self._span = span
+    def __init__(self, root, tip, span, sweep=None, sweepangle=45.0):
+        self.root = root  #: Root Chord of fin
+        self.tip = tip    #: Tip Chord of fin
+        self.span = span  #: Span ("height") of fin
+        self._length = root
 
         if sweep is not None:
-            self._sweep = sweep
-            self._sweepangle = 0
+            self.sweep = sweep  #: Sweep length of the fin
+            self.sweepangle = atan(self.sweep / self.span)
+            """Angle of sweep of the fin [radians]"""
         else:
-            self._sweep = 0
-            self._sweepangle = sweepangle
+            self.sweep = span * tan(radians(sweepangle))
+            self.sweepangle = radians(sweepangle)

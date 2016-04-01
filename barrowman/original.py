@@ -65,10 +65,11 @@ class Body(object):
         self.V_B = volume
         self.A_B = body[0].area
 
-    def C_P(self):
+    def C_P(self, Mach):
         """Center of Pressure.
 
-        :returns: the center of pressure of the rocket body in meters (tip of nose = 0)
+        :param float Mach: Mach number of the air-stream over the rocket [dimensionless]
+        :returns: the center of pressure of the rocket body in [meters] (tip of nose = 0)
 
         """
 
@@ -90,7 +91,7 @@ class Body(object):
 class Tail(object):
     """The tail section of the rocket: i.e. the part with fins. Assume that
     each fin is exactly the same and evenly spaced, and the bottom of the root
-    chord is also the bottom of the rocket. 
+    chord is also the bottom of the rocket.
 
     Nomenclature diagram:
 
@@ -104,13 +105,37 @@ class Tail(object):
     """
 
     def __init__(self, fin, N):
-        return
+        self._fin = fin
 
-    def C_P(self):
+    def C_P(self, Mach):
         """Center of Pressure.
 
-        :returns: the center of pressure of the rocket body in meters (tip of nose = 0)
+        :param float Mach: Mach number of the air-stream over the rocket [dimensionless]
+        :returns: the center of pressure of the rocket body in [meters] (tip of nose = 0)
 
         """
 
-        return
+        """Subsonic C_P is assumed to be the intersection of the 1/4 chord, and
+        the mean aerodynamic chord. "After much algebra" the paper says:
+
+        X = l_T + (x_t/3)[(c_r + 2c_t)/(c_r + c_t)] + 1/6[c_r + c_t  - (c_r * c_t)/(c_r + c_t)]
+
+        (eq. 3-10, pg. 10)
+
+        where:
+         - l_T = X coord of beginning of the fin (X=0 is tip of the nosecone)
+         - x_t = Sweep of fin === Fin Span*tan(sweepangle)
+         - c_r = Root Chord of fin
+         - c_t = Tip Chord of fin
+
+        In this case we want to return the partial X, so we ignore l_T (we don't know it yet anyway)
+        """
+
+        x_t = self._fin.sweep
+        c_r = self._fin.root
+        c_t = self._fin.tip
+
+        X = ((x_t / 3.0) * ((c_r + (2 * c_t)) / (c_r + c_t)))
+        X += (1 / 6.0) * (c_r + c_t  - (c_r * c_t)/(c_r + c_t))
+
+        return X
