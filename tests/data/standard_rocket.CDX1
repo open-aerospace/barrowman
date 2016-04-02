@@ -1,0 +1,77 @@
+<RASAeroDocument>
+  <FileVersion>2</FileVersion>
+  <RocketDesign>
+    <NoseCone>
+      <PartType>NoseCone</PartType>
+      <Length>11.811</Length>
+      <Diameter>3.937</Diameter>
+      <Shape>Conical</Shape>
+      <BluntRadius>0</BluntRadius>
+      <Location>0</Location>
+      <Color>Black</Color>
+    </NoseCone>
+    <BodyTube>
+      <PartType>BodyTube</PartType>
+      <Length>39.3701</Length>
+      <Diameter>3.937</Diameter>
+      <LaunchLugDiameter>0</LaunchLugDiameter>
+      <LaunchLugLength>0</LaunchLugLength>
+      <RailGuideDiameter>0</RailGuideDiameter>
+      <RailGuideHeight>0</RailGuideHeight>
+      <LaunchShoeArea>0</LaunchShoeArea>
+      <Location>11.811</Location>
+      <Color>Black</Color>
+      <BoattailLength>0</BoattailLength>
+      <BoattailRearDiameter>0</BoattailRearDiameter>
+      <BoattailOffset>0</BoattailOffset>
+      <Overhang>7.874</Overhang>
+      <Fin>
+        <Count>4</Count>
+        <Chord>7.874</Chord>
+        <Span>3.937</Span>
+        <SweepDistance>3.937</SweepDistance>
+        <TipChord>1.9685</TipChord>
+        <Thickness>0.1968</Thickness>
+        <LERadius>0.001</LERadius>
+        <Location>0</Location>
+        <AirfoilSection>Double Wedge</AirfoilSection>
+        <FX1>1</FX1>
+        <FX3>1</FX3>
+      </Fin>
+    </BodyTube>
+    <Surface>Polished</Surface>
+    <CP>0</CP>
+    <ModifiedBarrowman>False</ModifiedBarrowman>
+    <Turbulence>False</Turbulence>
+    <SustainerNozzle>0</SustainerNozzle>
+    <Booster1Nozzle>0</Booster1Nozzle>
+    <Booster2Nozzle>0</Booster2Nozzle>
+    <UseBooster1>False</UseBooster1>
+    <UseBooster2>False</UseBooster2>
+    <Comments />
+  </RocketDesign>
+  <LaunchSite>
+    <Altitude>4000</Altitude>
+    <Pressure>0</Pressure>
+    <RodAngle>0.5</RodAngle>
+    <RodLength>12</RodLength>
+    <Temperature>85</Temperature>
+    <WindSpeed>3</WindSpeed>
+  </LaunchSite>
+  <Recovery>
+    <Altitude1>1000</Altitude1>
+    <Altitude2>1000</Altitude2>
+    <DeviceType1>None</DeviceType1>
+    <DeviceType2>None</DeviceType2>
+    <Event1>False</Event1>
+    <Event2>False</Event2>
+    <Size1>1</Size1>
+    <Size2>1</Size2>
+    <EventType1>None</EventType1>
+    <EventType2>None</EventType2>
+    <CD1>1.33</CD1>
+    <CD2>1.33</CD2>
+  </Recovery>
+  <MachAlt />
+  <SimulationList />
+</RASAeroDocument>
