@@ -40,6 +40,17 @@ From the paper:
 # -*- coding: utf-8 -*-
 
 
+class Rocket(object):
+    """Full solution for a rocket"""
+
+    def __init__(self, body, tail):
+        self.body = body
+        self.tail = tail
+
+    def C_P(self, Mach):
+        return self.body.C_P(Mach) + self.tail.C_P(Mach)
+
+
 class Body(object):
     """Aerodynamic model of the body section (excluding fins) of a rocket. This includes
     the nose cone.
