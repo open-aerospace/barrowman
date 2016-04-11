@@ -33,6 +33,12 @@ class TestOrignal(unittest.TestCase):
         """
         self.assertAlmostEqual(self.body.C_P(0.3), 0.2, places=4)
 
+    def test_body_C_Na_subsonic(self):
+        """Set up a standard rocket (see data/standard-rocket.ork) and find the
+        C_P of the body (everything except fins)
+        """
+        self.assertAlmostEqual(self.body.C_Na(0.3), 2.0, places=8)
+
     def test_tail_cp_subsonic(self):
         """Set up a standard rocket (see data/standard-rocket.ork) and find the
         C_P of the tail (just fins)

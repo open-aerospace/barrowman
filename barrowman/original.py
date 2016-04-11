@@ -68,13 +68,17 @@ class Body(object):
     def __init__(self, body):
         length = 0
         volume = 0
+        area_r = 0
         for component in body:
             length += component.length
             volume += component.volume
+            if component.area > area_r:
+                area_r = component.area
 
         self.l_0 = length
         self.V_B = volume
         self.A_B = body[0].area
+        self.A_r = area_r
 
     def C_P(self, Mach):
         """Center of Pressure.
@@ -97,6 +101,29 @@ class Body(object):
         """
 
         return self.l_0 - (self.V_B/self.A_B)
+
+    def C_Na(self, Mach):
+        """Normal Force Coefficient Derivative.
+
+        :param float Mach: Mach number of the air-stream over the rocket [dimensionless]
+        :returns: the aerodynamic normal coefficient (C_Na) for the body
+
+        """
+
+        """From the paper: "...C_Na is independent of the body shape as long as
+        the integration of equation 3-62 is valid over the body."
+
+            C_Na(B) = 2 * (A_B / A_r)      (eq. 3-66, pg. 21)
+
+        where:
+         - C_Na(B): Normal Coef. of the Body
+         - A_B: Nose base area (cross-sectional area of the rocket at the base
+                of the nose)
+         - A_r: Reference area (likely the same thing as A_BN, unless there a
+                larger transition below)
+        """
+
+        return 2.0 * (self.A_B / self.A_r)
 
 
 class Tail(object):

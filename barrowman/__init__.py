@@ -70,6 +70,7 @@ class Tube(Component):
     def __init__(self, width, length):
         self._width = width
         self._length = length
+        self._radius = width / 2.0
 
     def _volume(self):
         return pi * (self._width/2.0)**2 * self._length
