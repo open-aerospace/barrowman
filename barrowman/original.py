@@ -48,7 +48,31 @@ class Rocket(object):
         self.tail = tail
 
     def C_P(self, Mach):
-        return self.body.C_P(Mach) + self.tail.C_P(Mach)
+        """Center of Pressure.
+
+        :param float Mach: Mach number of the air-stream over the rocket [dimensionless]
+        :returns: the center of pressure of the rocket body in [meters] (tip of nose = 0)
+
+        """
+
+        """The approach in the paper is to break up the rocket into sections
+        (body and tail) then put them back together. The way their put together
+        is to weight them by normal coef. C_Na.
+
+            X = X_B*C_Na(B) + X_T(B)*C_Na(T(B)) + X_B(T)*C_Na(B(T)) + X_T*C_Na(T) / C_Na
+            (eq. 3-107 pg. 37)
+
+        where:
+            X: center of pressure
+            C_Na: Normal coef.
+            subscripts: _B: body, _T(B): tail in presence of body, _B(T): body in
+                        presence of tail, _T: tail.
+        """
+
+        X_B = self.body.C_P(Mach)
+        C_NaB = self.body.C_Na(Mach)
+
+        return (X_B*C_NaB + self.tail.C_P(Mach))/1.0
 
 
 class Body(object):

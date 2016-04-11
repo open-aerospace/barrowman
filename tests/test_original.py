@@ -48,7 +48,7 @@ class TestOrignal(unittest.TestCase):
 
     def test_rocket_cp_subsonic(self):
         r = original.Rocket(self.body, self.tail)
-        self.assertAlmostEqual(r.C_P(0.3), 0.275, places=4)  #: FIXME Placeholder test, find real number
+        self.assertAlmostEqual(r.C_P(0.3), 0.475, places=4)  #: FIXME Placeholder test, find real number
 
 if __name__ == '__main__':
     import sys

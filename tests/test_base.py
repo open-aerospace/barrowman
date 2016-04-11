@@ -9,6 +9,7 @@ import unittest
 import barrowman
 from math import degrees
 
+
 class TestBase(unittest.TestCase):
 
     def test_fin_sweep(self):
