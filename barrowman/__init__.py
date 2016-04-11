@@ -12,9 +12,6 @@ class Component(object):
     has a length and width, and therefore volume and area.
     """
 
-    def __init__(self):
-        return
-
     @property
     def length(self):
         """The length of the component"""
