@@ -5,16 +5,20 @@ language: python
 python: 3.5
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements_dev.txt
+install:
+ - pip install -r requirements_dev.txt
+ - pip install coveralls
 
 # command to run tests, e.g. python setup.py test
 script:
   - tox
+  - coverage run --source=barrowman setup.py test
   - cd docs
   - make html
 
 # Deploy docs to gh-pages
 after_success:
+  - coveralls
   - cd docs
   - make html
   - cp _config.yml _build/html/
