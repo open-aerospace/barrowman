@@ -15,6 +15,7 @@ script:
   - coverage run --source=barrowman setup.py test
   - cd docs
   - make html
+  - cd ..
 
 # Deploy docs to gh-pages
 after_success:
