@@ -8,11 +8,14 @@ The barrowman Python Package
 .. image:: https://travis-ci.org/open-aerospace/barrowman.svg?branch=master
         :target: https://travis-ci.org/open-aerospace/barrowman
 
+.. image:: https://coveralls.io/repos/github/open-aerospace/barrowman/badge.svg?branch=master
+        :target: https://coveralls.io/github/open-aerospace/barrowman?branch=master
+
 
 The Practical Calculation of the Aerodynamic Characteristics of Slender Finned Vehicles
 
 * Free software: GPLv3 license
-* Documentation: https://open-aerospace.github.io/barrowman.
+* Documentation: https://open-aerospace.github.io/barrowman/.
 
 
 Features
