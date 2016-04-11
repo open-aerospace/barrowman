@@ -1,0 +1,527 @@
+<!doctype html>
+
+
+<html >
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>barrowman package &mdash; barrowman 0.0.1 documentation</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/style.css">
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon-180x180.png">
+      <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/assets/img/android-chrome-192x192.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16">
+      <link rel="shortcut icon" href="favicon.ico">
+      <meta name="msapplication-TileColor" content="#6677cc">
+      <meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png">
+      <meta name="theme-color" content="#6677cc">
+    <link rel="top" title="barrowman 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
+  </head>
+  <body role="document">
+ <section class="hero is-primary is-left is-bold">
+   <div class="hero-header">
+    <header class="header">
+     <div class="container">
+
+      <div class="header-left">
+       <a class="header-item" href="/">
+        <img src="/assets/img/title.png" alt="open-aerospace">
+       </a>
+      </div>
+
+      <div id="header-menu" class="header-right header-menu">
+       <span class="header-item">
+        <a  href="/">Home</a>
+       </span>
+       <span class="header-item">
+        <a  href="/about/">About</a>
+       </span>
+       <span class="header-item">
+        <a class="button is-info is-outlined is-inverted" href="https://github.com/open-aerospace">
+         <i class="fa fa-github"></i>
+         GitHub
+         </a>
+       </span>
+      </div>
+     </div>
+    </header>
+   </div>
+  </section>
+
+
+<section class="section">
+
+ <div class="container">
+  <div class="columns">
+      <div class="sphinxsidebar column is-3" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+
+          
+            
+            
+              <div class="toc">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">The barrowman Python Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#credits">Credits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">barrowman package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-barrowman">Main Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-barrowman.original">barrowman.original module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-barrowman-method">The Barrowman Method</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#types-of-contributions">Types of Contributions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#report-bugs">Report Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#fix-bugs">Fix Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#implement-features">Implement Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#write-documentation">Write Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#submit-feedback">Submit Feedback</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#get-started">Get Started!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-request-guidelines">Pull Request Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#tips">Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="authors.html#development-lead">Development Lead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authors.html#contributors">Contributors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id1">0.0.1 (2016-04-15)</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            
+          
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>  
+
+    <div class="column">
+     <div class="body content" role="main">
+      
+  <div class="section" id="barrowman-package">
+<h1>barrowman package</h1>
+<p>Units: Internally uses SI (MKS). Assume length in Meters, etc.) Angles are radians. Parameters should be explicit for the units they accept.</p>
+<div class="section" id="module-barrowman">
+<span id="main-module-contents"></span><h2>Main Module contents</h2>
+<dl class="class">
+<dt id="barrowman.Component">
+<em class="property">class </em><code class="descclassname">barrowman.</code><code class="descname">Component</code></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Base class for a single rocket Component. This can be something
+like a nosecone or the body of a rocket. It is a physical thing that
+has a length and width, and therefore volume and area.</p>
+<dl class="attribute">
+<dt id="barrowman.Component.area">
+<code class="descname">area</code></dt>
+<dd><p>The area of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Component.length">
+<code class="descname">length</code></dt>
+<dd><p>The length of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Component.volume">
+<code class="descname">volume</code></dt>
+<dd><p>The volume of the component</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="barrowman.Fin">
+<em class="property">class </em><code class="descclassname">barrowman.</code><code class="descname">Fin</code><span class="sig-paren">(</span><em>root</em>, <em>tip</em>, <em>span</em>, <em>sweep=None</em>, <em>sweepangle=45.0</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#barrowman.Component" title="barrowman.Component"><code class="xref py py-class docutils literal"><span class="pre">barrowman.Component</span></code></a></p>
+<p>A single trapezoidal fin.</p>
+<p>Note: though both sweep and sweepangle are optional, you probably need to specify at
+least one to correctly define a fin. Specifying both makes the system overdetermined.</p>
+<p>Nomenclature diagram:</p>
+<div class="figure">
+<img alt="Diagram of Barrowman's fin nomenclature." src="_images/barrowman_fin_nomenclature.svg" /></div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>root</strong> (<em>float</em>) &#8211; Length of the root chord of the fin [meters]</li>
+<li><strong>tip</strong> (<em>float</em>) &#8211; Length of the tip chord of the fin  [meters]</li>
+<li><strong>span</strong> (<em>float</em>) &#8211; Length of the span of the fin [meters]</li>
+<li><strong>sweep</strong> (<em>float</em>) &#8211; (Optional, default=None) The length of the sweep portion [meters]</li>
+<li><strong>sweepangle</strong> (<em>float</em>) &#8211; (Optional, default=45.0) The angle of the sweep [degrees]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="barrowman.Fin.area">
+<code class="descname">area</code></dt>
+<dd><p>The area of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Fin.length">
+<code class="descname">length</code></dt>
+<dd><p>The length of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Fin.root">
+<code class="descname">root</code><em class="property"> = None</em></dt>
+<dd><p>Root Chord of fin</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Fin.span">
+<code class="descname">span</code><em class="property"> = None</em></dt>
+<dd><p>Span (&#8220;height&#8221;) of fin</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Fin.sweep">
+<code class="descname">sweep</code><em class="property"> = None</em></dt>
+<dd><p>Sweep length of the fin</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Fin.sweepangle">
+<code class="descname">sweepangle</code><em class="property"> = None</em></dt>
+<dd><p>Angle of sweep of the fin [radians]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Fin.tip">
+<code class="descname">tip</code><em class="property"> = None</em></dt>
+<dd><p>Tip Chord of fin</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Fin.volume">
+<code class="descname">volume</code></dt>
+<dd><p>The volume of the component</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="barrowman.Nose">
+<em class="property">class </em><code class="descclassname">barrowman.</code><code class="descname">Nose</code><span class="sig-paren">(</span><em>shape</em>, <em>width</em>, <em>length</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#barrowman.Component" title="barrowman.Component"><code class="xref py py-class docutils literal"><span class="pre">barrowman.Component</span></code></a></p>
+<p>A Nosecone. Must be of a known shape (Conical, ogive, etc). The tip of
+the nose is assumed to be a sharp point and the datum (x=0) for all
+measurements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>shape</strong> (<em>str</em>) &#8211; The type of nosecone, see class for list of valid shapes</li>
+<li><strong>width</strong> (<em>float</em>) &#8211; The diameter of the nose [meters]</li>
+<li><strong>length</strong> (<em>float</em>) &#8211; The length of the nose [meters]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="barrowman.Nose.CONE">
+<code class="descname">CONE</code><em class="property"> = 'cone'</em></dt>
+<dd><p>Shape type &#8216;cone&#8217;</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Nose.area">
+<code class="descname">area</code></dt>
+<dd><p>The area of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Nose.length">
+<code class="descname">length</code></dt>
+<dd><p>The length of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Nose.volume">
+<code class="descname">volume</code></dt>
+<dd><p>The volume of the component</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="barrowman.Tube">
+<em class="property">class </em><code class="descclassname">barrowman.</code><code class="descname">Tube</code><span class="sig-paren">(</span><em>width</em>, <em>length</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#barrowman.Component" title="barrowman.Component"><code class="xref py py-class docutils literal"><span class="pre">barrowman.Component</span></code></a></p>
+<p>A cylindrical section of rocket.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>width</strong> (<em>float</em>) &#8211; The diameter of the section [meters]</li>
+<li><strong>length</strong> (<em>float</em>) &#8211; The length of the section [meters]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="barrowman.Tube.area">
+<code class="descname">area</code></dt>
+<dd><p>The area of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Tube.length">
+<code class="descname">length</code></dt>
+<dd><p>The length of the component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="barrowman.Tube.volume">
+<code class="descname">volume</code></dt>
+<dd><p>The volume of the component</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="submodules">
+<h2>Submodules</h2>
+</div>
+<div class="section" id="module-barrowman.original">
+<span id="barrowman-original-module"></span><h2>barrowman.original module</h2>
+<div class="section" id="the-barrowman-method">
+<h3>The Barrowman Method</h3>
+<p>A python implementation of the original <a class="reference external" href="http://ntrs.nasa.gov/search.jsp?R=20010047838">Barrowman Method</a> for the approximate
+evaluation of the aerodynamic model of a rocket.</p>
+<p>From the paper:</p>
+<blockquote>
+<div><p>STATEMENT OF PROBLEM</p>
+<p>Determine a set of expressions for the practical calculation of
+the aerodynamic characteristics of slender, axisymmetric finned
+vehicles at both subsonic and supersonic speeds. The
+characteristics of interest are the normal force coefficient
+derivative, C_Na; center of pressure, Xbar; roll forcing moment
+coefficient derivative, C_ls; roll damping moment coefficient
+derivative, C_lp; pitch damping moment coefficient derivative,
+C_mq; and drag coefficient, C_D.</p>
+<p>GENERAL METHOD OF SOLUTION</p>
+<ol class="arabic simple">
+<li>Divide vehicle into body and tail.</li>
+<li>Analyze the body and tail separately. Subdivide either when necessary</li>
+<li>Analyze wing-body interference.</li>
+<li>Recombine to form total vehicle solution.</li>
+</ol>
+<p>GENERAL ASSUMPTIONS</p>
+<ol class="arabic simple">
+<li>The angle-of-attack is very near zero.</li>
+<li>The flow is steady and irrotational.</li>
+<li>The vehicle is a rigid body.</li>
+<li>The nose tip is a sharp point.</li>
+</ol>
+</div></blockquote>
+<dl class="class">
+<dt id="barrowman.original.Body">
+<em class="property">class </em><code class="descclassname">barrowman.original.</code><code class="descname">Body</code><span class="sig-paren">(</span><em>body</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Aerodynamic model of the body section (excluding fins) of a rocket. This includes
+the nose cone.</p>
+<p>Nomenclature diagram:</p>
+<div class="figure">
+<img alt="Diagram of Barrowman's rocket parts nomenclature." src="_images/barrowman_nomenclature.svg" /></div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>body</strong> (<em>list</em>) &#8211; A list of body components (Nose, tube, transition, etc.)</td>
+</tr>
+</tbody>
+</table>
+<p>Members:</p>
+<dl class="method">
+<dt id="barrowman.original.Body.C_Na">
+<code class="descname">C_Na</code><span class="sig-paren">(</span><em>Mach</em><span class="sig-paren">)</span></dt>
+<dd><p>Normal Force Coefficient Derivative.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Mach</strong> (<em>float</em>) &#8211; Mach number of the air-stream over the rocket [dimensionless]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the aerodynamic normal coefficient (C_Na) for the body</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="barrowman.original.Body.C_P">
+<code class="descname">C_P</code><span class="sig-paren">(</span><em>Mach</em><span class="sig-paren">)</span></dt>
+<dd><p>Center of Pressure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Mach</strong> (<em>float</em>) &#8211; Mach number of the air-stream over the rocket [dimensionless]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the center of pressure of the rocket body in [meters] (tip of nose = 0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="barrowman.original.Rocket">
+<em class="property">class </em><code class="descclassname">barrowman.original.</code><code class="descname">Rocket</code><span class="sig-paren">(</span><em>body</em>, <em>tail</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Full solution for a rocket</p>
+<dl class="method">
+<dt id="barrowman.original.Rocket.C_P">
+<code class="descname">C_P</code><span class="sig-paren">(</span><em>Mach</em><span class="sig-paren">)</span></dt>
+<dd><p>Center of Pressure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Mach</strong> (<em>float</em>) &#8211; Mach number of the air-stream over the rocket [dimensionless]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the center of pressure of the rocket body in [meters] (tip of nose = 0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="barrowman.original.Tail">
+<em class="property">class </em><code class="descclassname">barrowman.original.</code><code class="descname">Tail</code><span class="sig-paren">(</span><em>fin</em>, <em>N</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>The tail section of the rocket: i.e. the part with fins. Assume that
+each fin is exactly the same and evenly spaced, and the bottom of the root
+chord is also the bottom of the rocket.</p>
+<p>Nomenclature diagram:</p>
+<div class="figure">
+<img alt="Diagram of Barrowman's rocket parts nomenclature." src="_images/barrowman_nomenclature.svg" /></div>
+<p>Takes a fin definition and the number of fins.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fin</strong> (<a class="reference internal" href="#barrowman.Fin" title="barrowman.Fin"><em>Fin</em></a>) &#8211; A Fin object</li>
+<li><strong>N</strong> (<em>int</em>) &#8211; The number of fins on the tail</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="barrowman.original.Tail.C_P">
+<code class="descname">C_P</code><span class="sig-paren">(</span><em>Mach</em><span class="sig-paren">)</span></dt>
+<dd><p>Center of Pressure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Mach</strong> (<em>float</em>) &#8211; Mach number of the air-stream over the rocket [dimensionless]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the center of pressure of the rocket body in [meters] (tip of nose = 0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <ul>
+        <li class="right ">
+          <a href="usage.html" title="Usage"
+             accesskey="P">previous</a></li>
+        <li class="right is-text-right">
+          <a href="contributing.html" title="Contributing"
+             accesskey="N">next</a></li> 
+      </ul>
+    </div>
+
+     </div>
+   </div>
+
+  </div>
+ </div>
+
+  </section>
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+        &copy; Copyright 2016, Nathan Bergey et al..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+    </footer>
+  </body>
+</html>
